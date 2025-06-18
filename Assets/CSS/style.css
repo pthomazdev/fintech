@@ -1,0 +1,260 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #4C1D95;
+    margin: 0;
+    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Layout principal */
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    min-height: 100vh;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Logo e título */
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.logo-img { 
+    width: 80px;
+}
+.logo-text h1{
+    font-size: 3rem; margin-bottom: 0.25rem;
+}
+.logo-text p{
+    letter-spacing: 1px;
+}
+
+/* Tabs de navegação */
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0rem;
+}
+
+.header button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.8rem 2rem;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+    transition: border-bottom 0.3s ease;
+}
+
+.header button:hover, .header button.active{
+    color: #E5E5E5;
+    border-bottom: 3px solid #E5E5E5;
+}
+
+/* Container do formulário */
+.container{
+    background-color: #F8FAFC;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 90%;
+    padding: 2rem 2.5rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content{
+    padding: 0;
+}
+.content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    color: #1E293B;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #334155;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #10B981;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    color: #1E293B;
+    background-color: #FFFFFF;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #94A3B8;
+    font-size: 0.9rem;
+}
+
+.password-group{
+    position: relative;
+}
+
+.toggle-password{
+    position: absolute;
+    left: 290px;
+    top: 48%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #94A3B8;
+}
+
+.toggle-password svg{
+    width: 20px;
+    height: 20px;
+}
+
+/* Switch */
+.switch-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #A855F7;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CCC;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #440069;
+    transition: all 0.3s ease;
+    border-radius: 100%;
+}
+
+.switch input:checked + .slider {
+    background-color: #793ab4;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+/*Botão de login*/
+.btn-primary {
+    background-color: #7C3AED;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #6D28D9;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Link "Esqueci minha senha" */
+.forget {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.forget a {
+    color: #2563EB;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .main-layout{
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .content h2 {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+}
